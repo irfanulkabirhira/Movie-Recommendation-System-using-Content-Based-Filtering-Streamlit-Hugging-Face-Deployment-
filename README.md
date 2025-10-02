@@ -1,46 +1,24 @@
-# 🎬 Movie Recommendation System
+# 🎬 Movie Recommendation System (Streamlit + Hugging Face)
 
-A simple movie recommendation system built with **Streamlit** and deployed on **Hugging Face Spaces**.
+## 📌 Overview
+This is a **Movie Recommendation System** built with **Streamlit** and deployed on **Hugging Face Spaces**.  
+It recommends **Top-5 movies** similar to a selected movie using a **content-based filtering approach** powered by a **similarity matrix**.  
+Posters are fetched dynamically via the **TMDB API**.
+
+🔗 Live Demo: [Hugging Face Space](https://huggingface.co/spaces/erfanulkabirhira/DataSynthis_Job_task)
+
+---
 
 ## 🚀 Features
-- Select a movie from dropdown
-- Get top 5 recommended movies with posters
-- Uses TMDB API to fetch movie posters
+- Content-based recommendation (similarity matrix)
+- Movie posters fetched from TMDB API
+- Interactive UI built with Streamlit
+- Lightweight and fast deployment on Hugging Face Spaces
 
-## 📦 Run Locally
+---
+
+## 🛠️ Installation & Setup
+Clone the repository:
 ```bash
-streamlit run app.py
-
----
-
-### 4. Deploy on Hugging Face
-1. Go to [Hugging Face Spaces](https://huggingface.co/spaces).
-2. Click **New Space**.
-   - Name: `movie-recommendation-system`
-   - SDK: **Streamlit**
-   - Visibility: Public (or Private if you prefer)
-3. Upload these files:
-   - `app.py`
-   - `movie_list.pkl`
-   - `similarity.pkl`
-   - `requirements.txt`
-   - (optional) `README.md`
-4. Hugging Face will automatically install dependencies and run your app.
-
----
-
-### 5. Check Logs if Error
-If it doesn’t run, go to **Settings → Logs** and check for missing libraries. Then just add them to `requirements.txt`.
-
----
-
-⚠️ One thing: your `app.py` uses **TMDB API Key**. Since it’s written directly in the code, anyone can see it.  
-👉 Hugging Face lets you store **API keys securely** using **Secrets**. You can go to:
-- **Settings → Repository secrets** → Add `TMDB_API_KEY`
-- Then replace your code with:
-
-```python
-import os
-
-API_KEY = os.getenv("TMDB_API_KEY")
-response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}')
+git clone https://github.com/<your-username>/movie-recommendation-system-streamlit.git
+cd movie-recommendation-system-streamlit
