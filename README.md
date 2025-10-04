@@ -3,7 +3,7 @@
 ## 📌 Overview
 This is a **Movie Recommendation System** built with **Streamlit** and deployed on **Hugging Face Spaces**.  
 It recommends **Top-5 movies** similar to a selected movie using a **content-based filtering approach** powered by a **similarity matrix**.  
-Posters are fetched dynamically via the **TMDB API**.
+Posters are fetched dynamically via the **TMDB API**....
 
 🔗 Live Demo: [Hugging Face Space](https://huggingface.co/spaces/erfanulkabirhira/DataSynthis_Job_task)
 
@@ -23,5 +23,6 @@ Clone the repository:
 ```bash
 git clone https://github.com/<your-username>/movie-recommendation-system-streamlit.git
 cd movie-recommendation-system-streamlit
+
 
 
